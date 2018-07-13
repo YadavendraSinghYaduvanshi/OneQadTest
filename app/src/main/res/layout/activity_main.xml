@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Layouts.MainActivity"
+    android:layout_marginTop="20dp"
+    android:gravity="center|top"
+    android:orientation="vertical">
+    
+
+
+        <TextView
+            android:layout_margin="15dp"
+            android:id="@+id/date"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#d4d4d4"
+            android:hint="Select Date..."
+            android:padding="15dp"
+            android:textCursorDrawable="@null"
+            android:textColor="#897"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:layout_margin="15dp"
+            android:id="@+id/userSpinner"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true">
+
+        </Spinner>
+
+
+
+
+    <Button
+        android:background="@color/colorPrimary"
+        android:layout_margin="40dp"
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="#ffff"/>
+
+</LinearLayout>
