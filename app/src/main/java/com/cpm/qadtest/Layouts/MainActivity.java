@@ -222,20 +222,24 @@ public class MainActivity extends AppCompatActivity {
                                                                                                             data = data.substring(1, data.length() - 1).replace("\\", "");
                                                                                                             data_global[0] = data;
                                                                                                             if (data.contains("Success")) {
+                                                                                                                loading.dismiss();
                                                                                                                 String visit_date = preferences.getString(CommonString.KEY_DATE, null);
                                                                                                                 editor = preferences.edit();
                                                                                                                 editor.putBoolean(CommonString.KEY_IS_QUIZ_DONE + visit_date, true);
                                                                                                                 editor.commit();
-                                                                                                                Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                                                                                                                dateTxt.setText("");
+                                                                                                              /*  Intent intent = new Intent(getBaseContext(), MainActivity.class);
                                                                                                                 startActivity(intent);
-                                                                                                                finish();
+                                                                                                                finish();*/
                                                                                                             } else {
+                                                                                                                loading.dismiss();
                                                                                                                 editor = preferences.edit();
                                                                                                                 editor.putString(CommonString.KEY_QUESTION_CD +
                                                                                                                         visit_date, qns_cd);
                                                                                                                 editor.putString(CommonString.KEY_ANSWER_CD +
                                                                                                                         visit_date, ans_cd);
                                                                                                                 editor.commit();
+                                                                                                                dateTxt.setText("");
                                                                                                               /*  Intent intent = new Intent(getBaseContext(), MainMenuActivity.class);
                                                                                                                 startActivity(intent);
                                                                                                                 finish();*/
@@ -380,6 +384,7 @@ public class MainActivity extends AppCompatActivity {
                                                                                                             editor.putString(CommonString.KEY_QUESTION_CD + visit_date, qns_cd);
                                                                                                             editor.putString(CommonString.KEY_ANSWER_CD + visit_date, ans_cd);
                                                                                                             editor.commit();
+                                                                                                            dateTxt.setText("");
                                                                                                            /* Intent intent = new Intent(getBaseContext(), MainMenuActivity.class);
                                                                                                             startActivity(intent);
                                                                                                             finish();*/
